@@ -21,7 +21,7 @@ scraped = []
 
 
 
-@app.route('/scraped')
+@app.route('/') #scraped
 def scraper():
     return jsonify(scraped)
 
