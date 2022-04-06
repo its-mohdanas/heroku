@@ -14,8 +14,8 @@ from selenium.webdriver.common.by import By
 app = Flask(__name__)
 
 
-path = 'D:\\Code\\WebDev\\chromedriver_win32\\chromedriver.exe'
-driver = webdriver.Chrome(path)
+# path = 'D:\\Code\\WebDev\\chromedriver_win32\\chromedriver.exe'
+# driver = webdriver.Chrome(path)
 
 scraped = []
 
