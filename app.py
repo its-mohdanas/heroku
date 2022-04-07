@@ -42,5 +42,7 @@ def add_scrap():
 
     dic1 = {"output": list1}
     return jsonify(dic1)
-
-app.run()
+    
+if __name__ == "__main__":
+    
+    app.run(debug=True)
