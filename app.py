@@ -17,18 +17,16 @@ app = Flask(__name__)
 # path = 'D:\\Code\\WebDev\\chromedriver_win32\\chromedriver.exe'
 # driver = webdriver.Chrome(path)
 
-scraped = []
+# # scraped = []
 
-
-
-@app.route('/') #scraped
-def scraper():
-    return jsonify(scraped)
+# @app.route('/') #scraped
+# def scraper():
+#     return jsonify()
 
 list1 = []
 
 ##############################################
-@app.route('/scraped', methods=['POST'])
+@app.route('/', methods=['GET'])
 def add_scrap():
     website="https://www.papersdrop.com/"
     scrap = request.get_json()
