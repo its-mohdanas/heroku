@@ -1,4 +1,4 @@
-from selenium import webdriver
+# from selenium import webdriver
 import os
 
 chrome_options = webdriver.ChromeOptions()
