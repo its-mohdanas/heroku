@@ -9,9 +9,13 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS, cross_origin
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+# app = Flask(__name__)
+
 app = Flask(__name__)
+CORS(app)
 
 
 # path = 'D:\\Code\\WebDev\\chromedriver_win32\\chromedriver.exe'
@@ -27,9 +31,11 @@ list1 = []
 
 ##############################################
 @app.route('/', methods=['GET'])
+@cross_origin()
 def add_scrap():
+    
     website="https://www.papersdrop.com/"
-    scrap = request.get_json()
+#     scrap = request.get_json()
     driver.get(website)
     links = driver.find_elements_by_tag_name('a')
 
